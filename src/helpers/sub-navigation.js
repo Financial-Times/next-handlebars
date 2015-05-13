@@ -2,11 +2,11 @@
 
 require('array.prototype.find');
 
-module.exports = function (section, params) {
+module.exports = function (sectionHref, params) {
     // expect the navigation middleware to be used
     var nav = params.data.root.nav || [];
     var sectionItem = nav.find(function (navItem) {
-        return navItem.name === section;
+        return navItem.href === sectionHref;
     });
     if (sectionItem) {
         var buffer = [];
