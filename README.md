@@ -116,3 +116,39 @@ Outputs contents if at least one of a number of things is truthy *Note that hand
 ### slice
 Loop through a subset of items
 - `{{#slice items limit="2" offset="4"}} some content {{/slice}}
+
+### Block Helpers
+
+### Navigation
+Run the block contents over each item in the navigation
+
+```mustache
+<ul>
+    {{#navigation}}
+        <li>
+            <a href="{{href}}">{{name}}</a>
+            <ul>
+                {{#each children}}
+                    <li>
+                        <a href="{{href}}">{{name}}</a>
+                    </li>
+                {{/each}}
+            </ul>
+        </li>
+    {{/navigation}}
+</ul>
+```
+
+### Sub Navigation
+Run the block contents the children of the matched navigation
+
+```mustache
+<h1>UK</h1>
+<ul>
+    {{#subNavigation '/stream/sections/uk'}}
+        <li>
+            <a href="{{href}}">{{name}}</a>
+        </li>
+    {{/subNavigation}}
+</ul>
+```

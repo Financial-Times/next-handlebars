@@ -17,6 +17,8 @@ module.exports = function (helpers) {
 	helpers.slice = require('./helpers/slice');
 	helpers.json = require('./helpers/json');
 	helpers.usePartial = require('./helpers/use-partial');
+	helpers.navigation = require('./helpers/navigation');
+	helpers.subNavigation = require('./helpers/sub-navigation');
 
 	return helpers;
 };
