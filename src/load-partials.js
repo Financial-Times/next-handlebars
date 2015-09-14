@@ -21,6 +21,7 @@ var itemsWithStats = function(directory) {
 			if (!exists) return [];
 			return readdirAsync(directory)
 				.then(function(files) {
+					files.push('.');
 					var stats = files.map(function(file) {
 						var fullPath = Path.join(directory, file);
 
