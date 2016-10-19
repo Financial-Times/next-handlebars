@@ -9,7 +9,7 @@ module.exports = (presenterPath, context, options) => {
 	if (presenterPath.startsWith('.')) {
 		Presenter = require(path.join(process.cwd(), presenterPath));
 	} else {
-		Presenter = require(presenterPath);
+		Presenter = require(path.join(process.cwd(), 'bower_components', presenterPath));
 	}
 	if (options.data) {
 		const data = Handlebars.createFrame(options.data);
