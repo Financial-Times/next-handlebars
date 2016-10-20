@@ -12,6 +12,7 @@ module.exports = (presenterPath, context, options) => {
 		Presenter = require(path.join(process.cwd(), 'bower_components', presenterPath));
 	}
 	if (options.data) {
+		if (options.hash) Object.assign(context, options.hash);
 		const data = Handlebars.createFrame(options.data);
 		data[presenterName] = new Presenter(context);
 		return options.fn(context, {data});
