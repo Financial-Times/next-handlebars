@@ -17,6 +17,7 @@ module.exports = function (helpers) {
 	helpers.decodeHtmlEntities = require('./helpers/decodeHtmlEntities');
 	helpers.defineBlock = require('./helpers/defineBlock');
 	helpers.outputBlock = require('./helpers/outputBlock');
+	helpers.indexPlusOne = require('./helpers/indexPlusOne');
 	helpers.slice = require('./helpers/slice');
 	helpers.json = require('./helpers/json');
 	helpers.concat = require('./helpers/concat');
