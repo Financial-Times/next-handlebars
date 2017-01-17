@@ -138,6 +138,11 @@ Outputs contents if a complex boolean logic expression is satisfied. Uses string
 Loop through a subset of items
 - `{{#slice items limit="2" offset="4"}} some content {{/slice}}
 
+### indexPlusOne
+Displays `@index` value plus one (so ordinal not cardinal, i.e. values start from 1 not 0).
+- `{{#each array}}{{#indexPlusOne}}{{@index}}{{/indexPlusOne}}{{/each}}`
+
+
 ## Presenter helpers
 
 ### presenter
