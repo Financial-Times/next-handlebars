@@ -13,7 +13,7 @@
   "dependencies": {
     "@financial-times/n-image": "^5.0.0",
     "@financial-times/n-topic-card": "^2.0.0",
-    "dateformat": "^1.0.11",
+    "dateformat": "^3.0.0",
     "denodeify": "^1.2.1",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.0"
