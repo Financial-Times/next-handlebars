@@ -1,6 +1,10 @@
 function deprecate(helper) {
 	return function (...args) {
-		console.warn(`The Handlebars helper ${helper.name} has been deprecated.`);
+		if (process.env.NODE_ENV !== 'production') {
+			// eslint-disable-next-line no-console
+			console.warn(`The Handlebars helper ${helper.name} has been deprecated.`);
+		}
+
 		return Reflect.apply(helper, this, args);
 	}
 }
